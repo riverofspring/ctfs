@@ -49,7 +49,7 @@ def tonelli(n, p):
         m = i
     return r
 ```
-The purpose of this function isn't immediately clear. However, with Professor ChatGPT on our side, there's nothing we can't conquer. It tells us that this function is something known as the Tonelli-Shanks Algorithm, which returns an $r$ such that $r^2 \equiv n \mod p$.
+The purpose of this function isn't immediately clear. However, with Professor ChatGPT on our side, there's nothing we can't conquer. It tells us that this function is something known as the Tonelli-Shanks Algorithm, which returns an $r$ such that $r^2 \equiv n \mod p$. I am inclined to believe it, mostly because I don't want to trawl through this mess of powers and moduli.
 
 The next function is ``xgcd()``, which is fairly straightforward this time: it's just Extended Euclidean Algorithm.
 ```py
@@ -105,6 +105,10 @@ First, this function checks if $x^{\frac{p-1}{2}} \mod p$ or $x^{\frac{q-1}{2}} 
 At this point I was getting walled and I didn't know how to proceed, since this looked more than a little bit intimidating. So I took a four hour break.
 
 When I returned, I noticed that since $p$ is prime, all perfect squares not divisible by $p$ pass the ``legendre()`` check by Euler's theorem. Therefore, an input of 1 may be the best way to get something out of ``advice()``, as the Tonelli algorithm would return 1, and thus we would be given $y$ such that $y \equiv \pm 1 \mod p,q$!
+
+However, I then went down the entirely wrong path. I had the stairway to Heaven laid out to me, and I decided to instead hang a sharp left and walk straight into hell.
+
+My team and I made the mistake of trying to figure out what other inputs would pass the ``legendre()`` test instead of analyzing the outputs that I was getting from inputting 1. We found that there was a certain list of primes that, when inputted to the ``legendre()``, would evaluate to -1, and another list that evaluated to 1. Therefore, an even number of primes from the first list multiplied by any number of primes from the second list would be inputs that returned something. Yet this reveals nothing about the actual nature of $p$ and $q$, so I decided to stare at the paper that I was working on for, another 2 hours. Then, I noticed something that helped me down the final stretch.
 
 If you repeatedly input 1, it'll cycle between 4 values. One of them is 1, a second is $N - 1$. This is expected: if $y \equiv 1 \mod p,q$ or $y \equiv -1 \mod p,q$, then $y = 1$ or $y = pq - 1$ respectively. However, the other two numbers that are output are more interesting. They are as follows:
 ```
