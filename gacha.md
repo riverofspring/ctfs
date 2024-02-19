@@ -49,7 +49,7 @@ Somewhere down the line, I realized that if I pass an enciphered image back thro
 
 I was also trying to find the original images that were used for the enciphering, so my browsing history now has an odd spike of Genshin Impact Wiki between the mountains of searching about AES-CTR and ImageMagick. That also didn't work as I had fundamentally misunderstood how ImageMagick encipher and AES-CTR worked. And I didn't gain anything new out of it either since I've already played Genshin Impact before.
 
-Nothing that I really tried helped me too much, so I went to sleep at 4 AM.
+So nothing that I really tried didn't really help me too much, so I went to sleep at 4 AM.
 
 The next day, my teammates and I were thinking that we could check the image metadata to see if we could glean any information off of that. Fortunately, ImageMagick provides a great way to do that. I ran ``magick identify -verbose`` on both enciphered images and found that since they used the same passphrase, they also had the same AES-CTR nonce. The nonce essentially tells the AES counter where to start, so in other words, the two had the *exact same* encryption scheme, with no differences or randomization at all.
 
