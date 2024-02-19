@@ -45,7 +45,7 @@ Simply using the images as passphrases for ``-encipher`` doesn't work: they cont
 
 So I stared at this challenge for two whole hours because I kept trying different combinations of images and passphrases for ``-encipher`` and ``-decipher``. I got nowhere sadg.
 
-Somewhere down the line, I realized that if I pass an enciphered image back through encipiher with the same key, I get the same image back. That's just AES at work.
+Somewhere down the line, I realized that if I pass an enciphered image back through encipher with the same key, I get the same image back. That's just AES at work.
 
 That didn't really help me too much, so I went to sleep at 4 AM.
 
