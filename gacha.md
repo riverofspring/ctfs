@@ -6,7 +6,7 @@
 Here's the challenge description:
 ![chall](assets/gachadesc.png)
 
-We're given the two files ``package.sh`` and ``chall.zip``. Unzipping ``chall.zip`` gives three images:
+We're given the two files ``package.sh`` and ``chall.zip``. Unzipping ``chall.zip`` gives three images, which are ``fiscl.png``, ``owo.png``, and ``uwu.png`` respectively:
 ![fischl](assets/chall/fiscl.png)
 ![owo](assets/chall/owo.png)
 ![uwu](assets/chall/uwu.png)
