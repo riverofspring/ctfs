@@ -1,4 +1,4 @@
-# misc/gacha
+# LA CTF misc/gacha
 
 ![zhongli](assets/zhongli.png)
 <sub><sup>(No way, Zhongli spotted outside Kerckhoff Hall??)</sup></sub>

@@ -1,4 +1,4 @@
-# crypto/hOlyT
+# LA CTF crypto/hOlyT
 If you're coming here from my misc/gacha writeup, this one will probably be less degen. The challenge prompt isn't that relevant, but we are given a file called ``server.py``. We're also given an address to ``nc``.
 
 Connecting with ``nc`` gives an interface where we're shown the following information:
