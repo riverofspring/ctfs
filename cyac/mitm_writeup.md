@@ -35,6 +35,7 @@ for i in range(1<<15, 1<<16):
     if k in d:
         m = i * d[k]
         print('m = ', m)
+        print(long_to_bytes(m).decode())
 ```
 
 Unfortunately, this output literally nothing. Why? Well, I wasn't too sure. But the idea seemed correct, so I kept staring at my solve script for around 15 minutes. I kind of wanted to give up or ask for help, since this seemed correct, but I decided to keep playing with it for a bit. The only feasible thing that could be wrong was that my ranges weren't correct, so I expanded them. Running the script again with my updated range gave me the flag of `593286738`. This isn't a flag. This is just a 32-bit number. I tried to hit it with the `long_to_bytes(593286738).decode()`, but instead this gave me a decode error. But surely my solve script was correct, since it did output an integer, and it should have been the right number.
